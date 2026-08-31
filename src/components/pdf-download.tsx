@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
+import { withBasePath } from "@/lib/base-path";
 
 type DownloadState = "idle" | "loading" | "error";
 
@@ -13,7 +14,7 @@ export function PdfDownload() {
     setState("loading");
 
     try {
-      const response = await fetch("/consorcio.pdf");
+      const response = await fetch(withBasePath("/consorcio.pdf"));
       if (!response.ok) {
         setState("error");
         return;

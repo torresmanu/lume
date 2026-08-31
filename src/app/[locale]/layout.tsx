@@ -7,6 +7,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { resolveLocale } from "@/i18n/locale";
 import { routing } from "@/i18n/routing";
+import { withBasePath } from "@/lib/base-path";
 import "../globals.css";
 
 const plexSans = IBM_Plex_Sans({
@@ -36,7 +37,7 @@ export async function generateMetadata({
   return {
     title: t("title"),
     description: t("description"),
-    icons: { icon: "/favicon.svg" },
+    icons: { icon: withBasePath("/favicon.svg") },
   };
 }
 

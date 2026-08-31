@@ -7,6 +7,7 @@ import {
 } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import { withBasePath } from "@/lib/base-path";
 
 type FormStatus = "idle" | "sending" | "success" | "empty" | "invalid" | "error";
 
@@ -50,7 +51,7 @@ export function WaitlistForm() {
     setStatus("sending");
 
     try {
-      const waitlistPath = `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/api/waitlist`;
+      const waitlistPath = withBasePath("/api/waitlist");
       const response = await fetch(waitlistPath, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
