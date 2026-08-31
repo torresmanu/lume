@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "title": "Lume — Don’t say goodbye",
+    "description": "A balcony grill extractor. Charcoal, no ducts, no fight. Tell us when to write."
+  },
+  "nav": {
+    "home": "Home",
+    "consorcio": "Building note",
+    "privacy": "Privacy",
+    "avisame": "Tell me",
+    "localeEs": "ES",
+    "localeEn": "EN",
+    "localeLabel": "Language"
+  },
+  "hero": {
+    "kicker": "The first Sunday",
+    "headline": "Don’t say goodbye.",
+    "sub": "Don’t start with a fight. Hello, Lume.",
+    "cta": "Tell me when it’s ready",
+    "ghost": "See how it works",
+    "imageAlt": "A Lume crate changing hands in a building landing, by the lift."
+  },
+  "oldScript": {
+    "kicker": "The usual script",
+    "headline": "Two hellos we refuse.",
+    "goodbyeTitle": "Goodbye to asado",
+    "goodbyeBody": "Boxes in the landing. The patio does not fit in the flat. You close the window and tell yourself that’s that.",
+    "helloTitle": "Hello to the fight",
+    "helloBody": "The phone face-down. The building chat. Nobody is shouting in this picture. Fear is enough."
+  },
+  "object": {
+    "kicker": "Hello, Lume",
+    "headline": "The object.",
+    "body": "An extractor for the balcony grill. It captures smoke at the grate — charcoal included. Facts, not theatre.",
+    "facts": {
+      "coal": "Charcoal.",
+      "ducts": "No ducts.",
+      "drill": "No drilling.",
+      "knob": "One knob."
+    },
+    "cta": "Tell me when it’s ready",
+    "knobAlt": "Lume’s ember knob on charcoal.",
+    "cleanAlt": "Lume’s tray and filter in the sink."
+  },
+  "domingo": {
+    "kicker": "The first Sunday",
+    "headline": "Asado Sunday. Here too.",
+    "body": "Table, hands, late light. The window next door stays open. The building is still a building.",
+    "cta": "Tell me when it’s ready",
+    "civicAlt": "Night balcony: someone is cooking and the neighbour’s window is open.",
+    "goldenAlt": "Golden-hour asado on a balcony, table set, charcoal lit."
+  },
+  "building": {
+    "kicker": "For the building",
+    "headline": "A courtesy, not a permit.",
+    "quote": "Lume does not legalise fire. It makes fire more civil, when fire is allowed.",
+    "body": "The bylaws decide. If charcoal is banned, Lume does not enable it. The note is for the building: what it is, what it does not promise, and that the neighbour stays a neighbour.",
+    "cta": "Note for the building"
+  },
+  "waitlist": {
+    "kicker": "Tell me",
+    "headline": "The first Sunday will arrive by email.",
+    "emailLabel": "Email",
+    "emailPlaceholder": "you@email.com",
+    "countryLabel": "Country (optional)",
+    "countryNone": "Choose a country",
+    "countryAr": "Argentina",
+    "countryEs": "Spain",
+    "countryOther": "Other",
+    "submit": "Tell me",
+    "sending": "Sending…",
+    "success": "Done. The first Sunday will reach you by email.",
+    "empty": "We need an email to write to you.",
+    "invalid": "That email does not look right. Try again.",
+    "error": "We could not save the address. Please try again in a moment.",
+    "privacy": "Why we ask for an email",
+    "honeypot": "Leave this field empty",
+    "imageAlt": "Chimichurri and charcoal on the table, ready for Sunday."
+  },
+  "footer": {
+    "tagline": "Lume — for the fire",
+    "consorcio": "Building note",
+    "privacy": "Privacy"
+  },
+  "consorcioPage": {
+    "metaTitle": "Note for the building — Lume",
+    "metaDescription": "A courtesy for the building. What Lume is, what it does not promise, and that fire stays the cook’s responsibility.",
+    "download": "Download PDF",
+    "downloading": "Preparing the PDF…",
+    "downloadError": "We could not download the PDF. This page is the note: print it or forward it as it is.",
+    "print": "Print this page"
+  },
+  "privacyPage": {
+    "metaTitle": "Privacy — Lume",
+    "metaDescription": "Why Lume asks for an email and what we do with it.",
+    "title": "Why we ask for an email",
+    "lead": "We want to tell you when Lume is ready for the first Sunday. That is all.",
+    "whatTitle": "What we keep",
+    "whatBody": "The address you leave and, if you want, the country. The date you joined. No phone. No street address.",
+    "whyTitle": "What for",
+    "whyBody": "To write when the object is ready in Argentina or Spain. We do not sell the list. We do not build a profile.",
+    "leaveTitle": "If you change your mind",
+    "leaveBody": "Reply to the notice and ask to be removed. We will.",
+    "contact": "Questions: hola@lume.fire — a person, not a bot."
+  }
+}

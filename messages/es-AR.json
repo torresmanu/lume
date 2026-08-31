@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "title": "Lume — No te despidas",
+    "description": "Extractor para la parrilla del balcón. Carbón, sin conductos, sin pelea. Avisame cuando esté listo."
+  },
+  "nav": {
+    "home": "Inicio",
+    "consorcio": "Consorcio",
+    "privacy": "Privacidad",
+    "avisame": "Avisame",
+    "localeEs": "ES",
+    "localeEn": "EN",
+    "localeLabel": "Idioma"
+  },
+  "hero": {
+    "kicker": "El primer domingo",
+    "headline": "No te despidas.",
+    "sub": "No empieces con una pelea. Hola, Lume.",
+    "cta": "Avisame cuando esté listo",
+    "ghost": "Ver cómo funciona",
+    "imageAlt": "Entrega de Lume en el palier: una caja cambia de manos junto al ascensor."
+  },
+  "oldScript": {
+    "kicker": "El guion de siempre",
+    "headline": "Dos saludos que no queremos dar.",
+    "goodbyeTitle": "Adiós al asado",
+    "goodbyeBody": "Cajas en el palier. El patio no entra al departamento. Cerrás la ventana y te decís que ya está.",
+    "helloTitle": "Hola al conflicto",
+    "helloBody": "El teléfono boca abajo. El grupo del consorcio. Nadie grita en esta foto: el miedo alcanza."
+  },
+  "object": {
+    "kicker": "Hola, Lume",
+    "headline": "El objeto.",
+    "body": "Extractor para la parrilla del balcón. Captura el humo en la reja — también a carbón. Hechos, no teatro.",
+    "facts": {
+      "coal": "Carbón.",
+      "ducts": "Sin conductos.",
+      "drill": "Sin taladro.",
+      "knob": "Un mando."
+    },
+    "cta": "Avisame cuando esté listo",
+    "knobAlt": "Mando de Lume, metal y brasa, sobre carbón.",
+    "cleanAlt": "Bandeja y filtro de Lume lavándose en la pileta."
+  },
+  "domingo": {
+    "kicker": "El primer domingo",
+    "headline": "Domingo de asado. También acá.",
+    "body": "Mesa, manos, luz tarde. La ventana de al lado, abierta. El edificio sigue siendo un edificio.",
+    "cta": "Avisame cuando esté listo",
+    "civicAlt": "Balcón de noche: alguien cocina y la ventana del vecino queda abierta.",
+    "goldenAlt": "Asado al atardecer en un balcón, mesa puesta, carbón encendido."
+  },
+  "building": {
+    "kicker": "Para el edificio",
+    "headline": "Una cortesía, no un permiso.",
+    "quote": "Lume no habilita el fuego. Hace el fuego más civil, cuando el fuego está permitido.",
+    "body": "El reglamento manda. Si el carbón está prohibido, Lume no lo habilita. La nota es para el consorcio: qué es, qué no promete, y que el vecino sigue siendo un vecino.",
+    "cta": "Nota para el consorcio"
+  },
+  "waitlist": {
+    "kicker": "Avisame",
+    "headline": "El primer domingo te va a llegar por mail.",
+    "emailLabel": "Correo",
+    "emailPlaceholder": "tu@correo.com",
+    "countryLabel": "País (opcional)",
+    "countryNone": "Elegí un país",
+    "countryAr": "Argentina",
+    "countryEs": "España",
+    "countryOther": "Otro",
+    "submit": "Avisame",
+    "sending": "Enviando…",
+    "success": "Listo. El primer domingo te va a llegar por mail.",
+    "empty": "Necesitamos un correo para avisarte.",
+    "invalid": "Ese correo no se ve bien. Probá de nuevo.",
+    "error": "No pudimos anotar el correo. Reintentá en un momento.",
+    "privacy": "Por qué pedimos un mail",
+    "honeypot": "Dejá este campo vacío",
+    "imageAlt": "Chimichurri y carbón sobre la mesa, listos para un domingo."
+  },
+  "footer": {
+    "tagline": "Lume — para el fuego",
+    "consorcio": "Consorcio",
+    "privacy": "Privacidad"
+  },
+  "consorcioPage": {
+    "metaTitle": "Nota para el consorcio — Lume",
+    "metaDescription": "Una cortesía para el edificio. Qué es Lume, qué no promete, y que el fuego sigue siendo responsabilidad de quien enciende.",
+    "download": "Descargar PDF",
+    "downloading": "Preparando el PDF…",
+    "downloadError": "No pudimos bajar el PDF. Esta página es la nota: imprimila o reenviala así.",
+    "print": "Imprimir esta página"
+  },
+  "privacyPage": {
+    "metaTitle": "Privacidad — Lume",
+    "metaDescription": "Por qué Lume pide un correo y qué hacemos con él.",
+    "title": "Por qué pedimos un mail",
+    "lead": "Queremos avisarte cuando Lume esté listo para el primer domingo. Nada más.",
+    "whatTitle": "Qué guardamos",
+    "whatBody": "El correo que nos dejás y, si querés, el país. Fecha de inscripción. No pedimos teléfono ni dirección.",
+    "whyTitle": "Para qué",
+    "whyBody": "Para escribirte cuando el objeto esté listo en Argentina o en España. No vendemos la lista. No armamos un perfil.",
+    "leaveTitle": "Si te arrepentís",
+    "leaveBody": "Respondé el mail de aviso y pedí que te borremos. Lo hacemos.",
+    "contact": "Preguntas: hola@lume.fire — un humano, no un bot."
+  }
+}

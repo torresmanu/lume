@@ -1,0 +1,380 @@
+.hero {
+  position: relative;
+  min-height: 100svh;
+  color: var(--field);
+  overflow: hidden;
+}
+
+.hero-media,
+.scene-media,
+.wait-media,
+.photo-frame {
+  position: relative;
+  overflow: hidden;
+  background: var(--charcoal);
+}
+
+.hero-media {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-media img,
+.scene-media img,
+.wait-media img,
+.photo-frame img,
+.media-zoom img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.media-zoom {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-veil {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--charcoal) 78%, transparent) 0%,
+      color-mix(in srgb, var(--charcoal) 28%, transparent) 48%,
+      transparent 72%
+    ),
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--charcoal) 35%, transparent) 0%,
+      transparent 28%,
+      color-mix(in srgb, var(--charcoal) 45%, transparent) 100%
+    );
+  pointer-events: none;
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: var(--space-5);
+  min-height: 100svh;
+  max-width: 36rem;
+  padding: calc(var(--header-offset) + 24px) var(--page-pad) 72px;
+}
+
+.hero-copy .kicker,
+.scene-copy .kicker {
+  color: color-mix(in srgb, var(--field) 70%, transparent);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.ghost-link {
+  color: var(--field);
+  opacity: 0.82;
+  text-underline-offset: 5px;
+  transition: opacity 0.25s ease;
+}
+
+.ghost-link:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+button.ghost-link {
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.section {
+  padding: clamp(72px, 10vw, 128px) var(--page-pad);
+}
+
+.section--field {
+  background: var(--field);
+  color: var(--ink);
+}
+
+.section-intro {
+  max-width: 22ch;
+  margin-bottom: var(--space-7);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.tile {
+  position: relative;
+  overflow: hidden;
+  background: var(--cream);
+  border-radius: var(--radius-tile);
+  padding: 40px 36px 36px;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: var(--space-4);
+  transition: transform 0.55s var(--ease-out);
+}
+
+.tile:hover {
+  transform: translateY(-8px);
+}
+
+.tile-index {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  font-size: clamp(4rem, 8vw, 6.5rem);
+  line-height: 1;
+  letter-spacing: -0.06em;
+  color: color-mix(in srgb, var(--ink) 8%, transparent);
+  pointer-events: none;
+}
+
+.object-grid,
+.wait-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(32px, 5vw, 80px);
+  align-items: center;
+}
+
+.collage {
+  position: relative;
+  min-height: 640px;
+  padding: 0 6% 10% 0;
+}
+
+.collage-main {
+  height: 100%;
+  min-height: 640px;
+  border-radius: var(--radius-photo);
+}
+
+.collage-inset {
+  position: absolute;
+  right: -8%;
+  bottom: -8%;
+  width: 46%;
+  height: 46%;
+  min-height: 220px;
+  border-radius: var(--radius-photo);
+  box-shadow: 0 24px 60px color-mix(in srgb, var(--charcoal) 28%, transparent);
+}
+
+.object-copy,
+.manifesto {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  max-width: var(--max-copy);
+}
+
+.manifesto {
+  min-height: 70svh;
+  justify-content: center;
+}
+
+.grouped {
+  list-style: none;
+  padding: 6px 0;
+  margin: 0;
+  background: var(--cream);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.grouped li {
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.grouped li:last-child {
+  border-bottom: 0;
+}
+
+.scene {
+  position: relative;
+  min-height: 100svh;
+  color: var(--field);
+  overflow: hidden;
+}
+
+.scene-media {
+  position: absolute;
+  inset: 0;
+}
+
+.scene-copy {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  max-width: 28rem;
+  min-height: 100svh;
+  justify-content: flex-end;
+  padding: 80px var(--page-pad) 88px;
+}
+
+.scene-veil {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--charcoal) 58%, transparent) 0%,
+      color-mix(in srgb, var(--charcoal) 18%, transparent) 42%,
+      transparent 68%
+    ),
+    linear-gradient(
+      180deg,
+      transparent 36%,
+      color-mix(in srgb, var(--charcoal) 62%, transparent) 100%
+    );
+  pointer-events: none;
+}
+
+.quote-display {
+  font-size: clamp(1.7rem, 4.4vw, 3.1rem);
+  line-height: 1.16;
+  letter-spacing: -0.035em;
+  font-weight: 400;
+  max-width: 16ch;
+}
+
+.wait-scene {
+  position: relative;
+  min-height: 100svh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.wait-media {
+  position: absolute;
+  inset: 0;
+}
+
+.wait-veil {
+  position: absolute;
+  inset: 0;
+  background: color-mix(in srgb, var(--charcoal) 28%, transparent);
+  pointer-events: none;
+}
+
+.wait-card {
+  position: relative;
+  z-index: 1;
+  width: min(440px, 100%);
+  margin-right: var(--page-pad);
+  margin-top: var(--header-offset);
+  margin-bottom: var(--space-7);
+  padding: 32px 28px 28px;
+  border-radius: 28px;
+  background: color-mix(in srgb, var(--field) 88%, transparent);
+  border: 1px solid color-mix(in srgb, var(--white) 40%, transparent);
+  backdrop-filter: blur(28px) saturate(1.4);
+  -webkit-backdrop-filter: blur(28px) saturate(1.4);
+  box-shadow: 0 24px 80px color-mix(in srgb, var(--charcoal) 22%, transparent);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.wait-card .field input,
+.wait-card .field select {
+  background: var(--white);
+}
+
+#avisame,
+#como-funciona {
+  scroll-margin-top: 24px;
+}
+
+@media (max-width: 900px) {
+  .pair,
+  .object-grid,
+  .wait-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-veil {
+    background:
+      linear-gradient(
+        180deg,
+        color-mix(in srgb, var(--charcoal) 20%, transparent) 0%,
+        color-mix(in srgb, var(--charcoal) 18%, transparent) 42%,
+        color-mix(in srgb, var(--charcoal) 78%, transparent) 100%
+      );
+  }
+
+  .hero-copy {
+    max-width: none;
+    padding-bottom: 48px;
+  }
+
+  .tile {
+    min-height: 220px;
+    padding: 32px 24px 24px;
+  }
+
+  .collage,
+  .collage-main {
+    min-height: 360px;
+  }
+
+  .collage-inset {
+    width: 42%;
+    height: 38%;
+    min-height: 140px;
+    right: 16px;
+    bottom: -20px;
+  }
+
+  .scene-copy {
+    min-height: 0;
+    padding-top: 48px;
+  }
+
+  .scene {
+    min-height: 0;
+  }
+
+  .scene-media {
+    position: relative;
+    min-height: 420px;
+  }
+
+  .wait-scene {
+    display: block;
+    min-height: 0;
+  }
+
+  .wait-media {
+    position: relative;
+    min-height: 320px;
+  }
+
+  .wait-card {
+    width: auto;
+    margin: -48px var(--page-pad) 48px;
+  }
+}

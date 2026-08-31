@@ -1,0 +1,105 @@
+/* Load: type sharpens in — closer to a keynote than a generic fade-up. */
+.hero-copy > * {
+  animation: sharpen-in 1.05s var(--ease-out) both;
+}
+
+.hero-copy > :nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.hero-copy > :nth-child(2) {
+  animation-delay: 0.16s;
+}
+
+.hero-copy > :nth-child(3) {
+  animation-delay: 0.28s;
+}
+
+.hero-copy > :nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+@keyframes sharpen-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+    filter: blur(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+    filter: blur(0);
+  }
+}
+
+/* Photos settle from a slight crop as they enter the viewport. */
+.media-zoom {
+  animation: settle-crop linear both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+@keyframes settle-crop {
+  from {
+    transform: scale(1.1);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+.tile,
+.wait-card,
+.grouped,
+.quote-display {
+  animation: rise-soft linear both;
+  animation-timeline: view();
+  animation-range: entry 0% entry 36%;
+}
+
+@keyframes rise-soft {
+  from {
+    opacity: 0.35;
+    transform: translateY(28px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.form-status--ok,
+.form-status--error {
+  animation: sharpen-in 0.45s var(--ease-out) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hero-copy > *,
+  .media-zoom,
+  .tile,
+  .wait-card,
+  .grouped,
+  .quote-display,
+  .form-status--ok,
+  .form-status--error,
+  .ember-button {
+    animation: none;
+    transition: none;
+    filter: none;
+    transform: none;
+  }
+
+  .tile:hover,
+  .ember-button:hover,
+  .ember-button:active {
+    transform: none;
+    box-shadow: none;
+  }
+}
