@@ -14,11 +14,11 @@
   },
   "hero": {
     "kicker": "El primer domingo",
-    "headline": "No te despidas.",
+    "headline": "No te despidas del asado.",
     "sub": "No empieces con una pelea. Hola, Lume.",
     "cta": "Avisame cuando esté listo",
     "ghost": "Ver cómo funciona",
-    "imageAlt": "Entrega de Lume en el palier: una caja cambia de manos junto al ascensor."
+    "imageAlt": "Dos personas sostienen la caja de Lume: extractor modular para parrilla."
   },
   "oldScript": {
     "kicker": "El guion de siempre",
@@ -59,7 +59,7 @@
   },
   "waitlist": {
     "kicker": "Avisame",
-    "headline": "El primer domingo te va a llegar por mail.",
+    "headline": "Te avisamos cuando Lume esté listo.",
     "emailLabel": "Correo",
     "emailPlaceholder": "tu@correo.com",
     "countryLabel": "País (opcional)",
@@ -69,7 +69,14 @@
     "countryOther": "Otro",
     "submit": "Avisame",
     "sending": "Enviando…",
-    "success": "Listo. El primer domingo te va a llegar por mail.",
+    "successTitle": "Listo.",
+    "successBody": "Te escribimos cuando Lume esté listo. Si hay asado en el edificio, avisale a un vecino.",
+    "shareWhatsapp": "Avisale a un vecino",
+    "shareText": "No te despidas del asado. Lume es un extractor para la parrilla del balcón — carbón, sin conductos. Anotate para el primer domingo: {url}",
+    "shareCopy": "Copiar el enlace",
+    "shareCopied": "Enlace copiado.",
+    "shareCopyError": "No se pudo copiar. Probá de nuevo.",
+    "shareSave": "Guardar la foto",
     "empty": "Necesitamos un correo para avisarte.",
     "invalid": "Ese correo no se ve bien. Probá de nuevo.",
     "error": "No pudimos anotar el correo. Reintentá en un momento.",

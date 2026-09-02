@@ -8,6 +8,7 @@ import {
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { withBasePath } from "@/lib/base-path";
+import { WaitlistSuccess } from "./waitlist-success";
 
 type FormStatus = "idle" | "sending" | "success" | "empty" | "invalid" | "error";
 
@@ -75,10 +76,16 @@ export function WaitlistForm() {
 
   const isSending = status === "sending";
   const isSuccess = status === "success";
+  const emailReady = EMAIL_PATTERN.test(email.trim());
+  const emailFieldClass = emailReady ? "field field--ready" : "field";
+
+  if (isSuccess) {
+    return <WaitlistSuccess />;
+  }
 
   return (
     <form className="form" onSubmit={handleSubmit} noValidate>
-      <label className="field">
+      <label className={emailFieldClass}>
         <span>{t("emailLabel")}</span>
         <input
           type="email"
@@ -88,7 +95,7 @@ export function WaitlistForm() {
           placeholder={t("emailPlaceholder")}
           value={email}
           onChange={handleEmailChange}
-          disabled={isSending || isSuccess}
+          disabled={isSending}
           aria-invalid={status === "empty" || status === "invalid"}
           aria-describedby="waitlist-status"
         />
@@ -100,7 +107,7 @@ export function WaitlistForm() {
           name="country"
           value={country}
           onChange={handleCountryChange}
-          disabled={isSending || isSuccess}
+          disabled={isSending}
         >
           <option value="">{t("countryNone")}</option>
           <option value="AR">{t("countryAr")}</option>
@@ -125,7 +132,7 @@ export function WaitlistForm() {
         <button
           type="submit"
           className="ember-button ember-button--block"
-          disabled={isSending || isSuccess}
+          disabled={isSending}
         >
           {isSending ? <span className="spinner" aria-hidden="true" /> : null}
           {isSending ? t("sending") : t("submit")}
@@ -144,19 +151,17 @@ export function WaitlistForm() {
 function StatusMessage({ status }: { status: FormStatus }) {
   const t = useTranslations("waitlist");
 
-  if (status === "idle" || status === "sending") {
+  if (status === "idle" || status === "sending" || status === "success") {
     return <p id="waitlist-status" className="form-status" />;
   }
 
-  const tone = status === "success" ? "form-status--ok" : "form-status--error";
+  const tone = "form-status--error";
   const message =
-    status === "success"
-      ? t("success")
-      : status === "empty"
-        ? t("empty")
-        : status === "invalid"
-          ? t("invalid")
-          : t("error");
+    status === "empty"
+      ? t("empty")
+      : status === "invalid"
+        ? t("invalid")
+        : t("error");
 
   return (
     <p id="waitlist-status" className={`form-status ${tone}`} role="status">

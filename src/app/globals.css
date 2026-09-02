@@ -123,10 +123,30 @@ ul {
   box-shadow: none;
 }
 
-.ember-button--ghost:hover,
-.ember-button--ghost:focus-visible {
-  background: color-mix(in srgb, var(--field) 22%, transparent);
+.ember-button--quiet {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--line);
   box-shadow: none;
+}
+
+.ember-button--quiet:hover,
+.ember-button--quiet:focus-visible {
+  background: color-mix(in srgb, var(--ember) 8%, var(--white));
+  border-color: color-mix(in srgb, var(--ember) 35%, var(--line));
+  box-shadow: none;
+  transform: none;
+}
+
+.ember-button--quiet:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.ember-button--pending {
+  pointer-events: none;
+  opacity: 0.7;
+  cursor: wait;
 }
 
 .kicker {
@@ -223,6 +243,12 @@ ul {
   border-color: color-mix(in srgb, var(--ember) 55%, var(--line));
   box-shadow: 0 0 0 4px color-mix(in srgb, var(--ember) 16%, transparent);
   background: var(--white);
+}
+
+/* Valid email: a quiet ember, like a match catching before submit. */
+.field--ready input {
+  border-color: color-mix(in srgb, var(--ember) 42%, var(--line));
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--ember) 10%, transparent);
 }
 
 .form-status {

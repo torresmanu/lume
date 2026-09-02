@@ -14,11 +14,11 @@
   },
   "hero": {
     "kicker": "The first Sunday",
-    "headline": "Don’t say goodbye.",
+    "headline": "Don’t say goodbye to asado.",
     "sub": "Don’t start with a fight. Hello, Lume.",
     "cta": "Tell me when it’s ready",
     "ghost": "See how it works",
-    "imageAlt": "A Lume crate changing hands in a building landing, by the lift."
+    "imageAlt": "Two people holding the Lume crate: a modular extractor for the grill."
   },
   "oldScript": {
     "kicker": "The usual script",
@@ -59,7 +59,7 @@
   },
   "waitlist": {
     "kicker": "Tell me",
-    "headline": "The first Sunday will arrive by email.",
+    "headline": "We'll tell you when Lume is ready.",
     "emailLabel": "Email",
     "emailPlaceholder": "you@email.com",
     "countryLabel": "Country (optional)",
@@ -69,7 +69,14 @@
     "countryOther": "Other",
     "submit": "Tell me",
     "sending": "Sending…",
-    "success": "Done. The first Sunday will reach you by email.",
+    "successTitle": "You're in.",
+    "successBody": "We'll write when Lume is ready. If there's an asado in the building, tell a neighbour.",
+    "shareWhatsapp": "Tell a neighbour",
+    "shareText": "Don't say goodbye to asado. Lume is a balcony grill extractor — charcoal, no ducts. Get in line for the first Sunday: {url}",
+    "shareCopy": "Copy the link",
+    "shareCopied": "Link copied.",
+    "shareCopyError": "Could not copy. Try again.",
+    "shareSave": "Save the photo",
     "empty": "We need an email to write to you.",
     "invalid": "That email does not look right. Try again.",
     "error": "We could not save the address. Please try again in a moment.",

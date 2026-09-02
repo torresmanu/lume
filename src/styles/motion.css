@@ -76,6 +76,32 @@
   animation: sharpen-in 0.45s var(--ease-out) both;
 }
 
+@keyframes match-catch {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+    filter: blur(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+    filter: blur(0);
+  }
+}
+
+@keyframes ember-strike {
+  from {
+    width: 6px;
+    opacity: 0.35;
+  }
+
+  to {
+    width: 42px;
+    opacity: 1;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -89,7 +115,9 @@
   .quote-display,
   .form-status--ok,
   .form-status--error,
-  .ember-button {
+  .ember-button,
+  .wait-success,
+  .wait-success-ember {
     animation: none;
     transition: none;
     filter: none;
