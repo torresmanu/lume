@@ -1,13 +1,16 @@
 {
   "meta": {
     "title": "Lume — Don’t say goodbye",
-    "description": "A balcony grill extractor. Charcoal, no ducts, no fight. Tell us when to write."
+    "description": "A balcony grill extractor. Charcoal, no ducts, no fight. Tell us when to write.",
+    "ogImageAlt": "Chimichurri and charcoal on the table, ready for Sunday."
   },
   "nav": {
     "home": "Home",
     "consorcio": "Building note",
+    "preguntas": "Questions",
     "privacy": "Privacy",
     "avisame": "Tell me",
+    "localeAr": "AR",
     "localeEs": "ES",
     "localeEn": "EN",
     "localeLabel": "Language"
@@ -67,6 +70,10 @@
     "countryAr": "Argentina",
     "countryEs": "Spain",
     "countryOther": "Other",
+    "parrillaLabel": "Do you already have a grill on the balcony? (optional)",
+    "parrillaNone": "Prefer not to say",
+    "parrillaYes": "Yes",
+    "parrillaNotYet": "Not yet",
     "submit": "Tell me",
     "sending": "Sending…",
     "successTitle": "You're in.",
@@ -87,6 +94,7 @@
   "footer": {
     "tagline": "Lume — for the fire",
     "consorcio": "Building note",
+    "preguntas": "Questions",
     "privacy": "Privacy"
   },
   "consorcioPage": {
@@ -103,11 +111,34 @@
     "title": "Why we ask for an email",
     "lead": "We want to tell you when Lume is ready for the first Sunday. That is all.",
     "whatTitle": "What we keep",
-    "whatBody": "The address you leave and, if you want, the country. The date you joined. No phone. No street address.",
+    "whatBody": "The address you leave. If you want, the country, whether you already have a grill, and whether a neighbour sent you. The date you joined. No phone. No street address.",
     "whyTitle": "What for",
-    "whyBody": "To write when the object is ready in Argentina or Spain. We do not sell the list. We do not build a profile.",
+    "whyBody": "To write when the object is ready in Argentina or Spain, and to know which crate to talk about. We do not sell the list. We do not build a profile.",
     "leaveTitle": "If you change your mind",
     "leaveBody": "Reply to the notice and ask to be removed. We will.",
-    "contact": "Questions: hola@lume.fire — a person, not a bot."
+    "contact": "Questions: hola@lumefuego.com — a person, not a bot."
+  },
+  "faqPage": {
+    "metaTitle": "Questions — Lume",
+    "metaDescription": "Can you grill on a balcony? What Lume is, what it does not promise, and the note for the building.",
+    "kicker": "Questions",
+    "title": "What people usually ask.",
+    "lead": "The bylaws decide. We do not sell miracles or permits. Here, calmly.",
+    "q1": "Can I make asado on the balcony?",
+    "a1": "It depends on your building rules and on not being a problem for the neighbours. Smoke and smell must stay within ordinary tolerance. Lume does not change that rule: it makes fire more civil, when fire is allowed.",
+    "q2": "What if charcoal is banned?",
+    "a2": "Lume does not legalise fire. If the building forbids charcoal, the object does not enable it. The note for the building says exactly that, so a chairperson can forward it without surprises.",
+    "q3": "Is it smokeless?",
+    "a3": "No. That aisle is electric plates. Lume captures smoke at the grate — charcoal included — and reduces the plume and odour leaving the balcony. We do not promise a miracle.",
+    "q4": "Do I have to drill the façade?",
+    "a4": "No. No ducts. No drilling into common structure. It is a household appliance, ordinary plug. The cook stays beside it, talking.",
+    "q5": "Does it work on a real grill?",
+    "a5": "It is built for charcoal. If it only worked on induction, it would not be Lume. Use it over your grill, on the balcony, not as a kitchen rangehood in a closed room.",
+    "q6": "What do I tell the building?",
+    "a6": "Send them the note. It is a courtesy, not a permit: what it is, what it does not promise, and that the neighbour stays a neighbour.",
+    "q7": "When can I buy one?",
+    "a7": "Not yet. Leave an email and we will write when the first Sunday is ready in Argentina or Spain.",
+    "consorcioCta": "Note for the building",
+    "waitlistCta": "Tell me when it’s ready"
   }
 }

@@ -11,6 +11,9 @@ export function LocaleSwitch() {
   return (
     <nav className="locale-switch" aria-label={t("localeLabel")}>
       <Link href={pathname} locale="es-AR" aria-current={locale === "es-AR" ? "true" : undefined}>
+        {t("localeAr")}
+      </Link>
+      <Link href={pathname} locale="es-ES" aria-current={locale === "es-ES" ? "true" : undefined}>
         {t("localeEs")}
       </Link>
       <Link href={pathname} locale="en" aria-current={locale === "en" ? "true" : undefined}>

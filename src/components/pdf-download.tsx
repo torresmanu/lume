@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { withBasePath } from "@/lib/base-path";
+import { trackEvent } from "@/lib/analytics";
 
 type DownloadState = "idle" | "loading" | "error";
 
@@ -27,6 +28,7 @@ export function PdfDownload() {
       anchor.download = "lume-nota-consorcio.pdf";
       anchor.click();
       URL.revokeObjectURL(url);
+      trackEvent("pdf_download");
       setState("idle");
     } catch {
       setState("error");

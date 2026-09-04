@@ -1,14 +1,29 @@
 import { mkdir, appendFile } from "node:fs/promises";
 import path from "node:path";
 import { z } from "zod";
+import { parseWaitlistRef } from "@/lib/waitlist-share";
 
 const WaitlistSchema = z.object({
   email: z.string().trim().email(),
   country: z.enum(["AR", "ES", "OTHER"]).optional(),
+  parrilla: z.enum(["yes", "not_yet"]).optional(),
+  ref: z
+    .string()
+    .optional()
+    .transform((value) => parseWaitlistRef(value)),
+  locale: z.enum(["es-AR", "es-ES", "en"]).optional(),
   website: z.string().max(0).optional(),
 });
 
 export type WaitlistPayload = z.infer<typeof WaitlistSchema>;
+
+export type WaitlistEntry = {
+  email: string;
+  country?: "AR" | "ES" | "OTHER";
+  parrilla?: "yes" | "not_yet";
+  ref?: string;
+  locale?: "es-AR" | "es-ES" | "en";
+};
 
 const WINDOW_MS = 60 * 60 * 1000;
 const MAX_PER_WINDOW = 5;
@@ -72,10 +87,7 @@ export function parseWaitlistBody(input: unknown):
   return { ok: true, data: parsed.data, bot: false };
 }
 
-export async function persistWaitlist(entry: {
-  email: string;
-  country?: "AR" | "ES" | "OTHER";
-}): Promise<void> {
+export async function persistWaitlist(entry: WaitlistEntry): Promise<void> {
   const resendConfigured = Boolean(
     process.env.RESEND_API_KEY && process.env.RESEND_AUDIENCE_ID,
   );
@@ -98,10 +110,7 @@ export async function persistWaitlist(entry: {
   }
 }
 
-async function persistToFile(entry: {
-  email: string;
-  country?: "AR" | "ES" | "OTHER";
-}): Promise<boolean> {
+async function persistToFile(entry: WaitlistEntry): Promise<boolean> {
   const candidates = [
     process.env.WAITLIST_DIR,
     path.join(process.cwd(), "data"),
@@ -112,6 +121,9 @@ async function persistToFile(entry: {
     receivedAt: new Date().toISOString(),
     email: entry.email,
     country: entry.country ?? null,
+    parrilla: entry.parrilla ?? null,
+    ref: entry.ref ?? null,
+    locale: entry.locale ?? null,
   })}\n`;
 
   for (const dir of candidates) {
@@ -127,10 +139,7 @@ async function persistToFile(entry: {
   return false;
 }
 
-async function persistToResend(entry: {
-  email: string;
-  country?: "AR" | "ES" | "OTHER";
-}): Promise<boolean> {
+async function persistToResend(entry: WaitlistEntry): Promise<boolean> {
   const apiKey = process.env.RESEND_API_KEY;
   const segmentId = process.env.RESEND_AUDIENCE_ID;
   if (!apiKey || !segmentId) {
@@ -142,6 +151,8 @@ async function persistToResend(entry: {
     "Content-Type": "application/json",
   };
 
+  const properties = contactProperties(entry);
+
   try {
     // Resend contacts are global. Create first, then attach the waitlist
     // segment (RESEND_AUDIENCE_ID still holds that UUID).
@@ -151,6 +162,7 @@ async function persistToResend(entry: {
       body: JSON.stringify({
         email: entry.email,
         unsubscribed: false,
+        ...(properties ? { properties } : {}),
       }),
     });
 
@@ -166,6 +178,23 @@ async function persistToResend(entry: {
   } catch {
     return false;
   }
+}
+
+function contactProperties(entry: WaitlistEntry): Record<string, string> | undefined {
+  const properties: Record<string, string> = {};
+  if (entry.country) {
+    properties.country = entry.country;
+  }
+  if (entry.parrilla) {
+    properties.parrilla = entry.parrilla;
+  }
+  if (entry.ref) {
+    properties.ref = entry.ref;
+  }
+  if (entry.locale) {
+    properties.locale = entry.locale;
+  }
+  return Object.keys(properties).length > 0 ? properties : undefined;
 }
 
 async function addContactToSegment(

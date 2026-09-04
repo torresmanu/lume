@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { sendWelcomeEmail } from "@/lib/waitlist-email";
 import {
   clientKey,
   parseWaitlistBody,
@@ -49,6 +50,9 @@ export async function POST(request: Request) {
     await persistWaitlist({
       email: parsed.data.email,
       country: parsed.data.country,
+      parrilla: parsed.data.parrilla,
+      ref: parsed.data.ref,
+      locale: parsed.data.locale,
     });
   } catch {
     return NextResponse.json(
@@ -56,6 +60,12 @@ export async function POST(request: Request) {
       { status: 503, headers: rateHeaders },
     );
   }
+
+  // Welcome mail is courtesy. The person is already on the list.
+  await sendWelcomeEmail({
+    email: parsed.data.email,
+    locale: parsed.data.locale,
+  });
 
   return NextResponse.json({ ok: true }, { headers: rateHeaders });
 }

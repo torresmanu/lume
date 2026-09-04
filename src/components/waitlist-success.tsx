@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { withBasePath } from "@/lib/base-path";
+import { trackEvent } from "@/lib/analytics";
 import { waitlistLandingUrl, whatsappShareHref } from "@/lib/waitlist-share";
 
 type CopyState = "idle" | "copied" | "failed";
@@ -14,9 +15,8 @@ export function WaitlistSuccess() {
   const [copyState, setCopyState] = useState<CopyState>("idle");
 
   useEffect(() => {
-    setShareUrl(
-      waitlistLandingUrl(window.location.origin, window.location.pathname),
-    );
+    trackEvent("waitlist_success");
+    setShareUrl(waitlistLandingUrl(window.location.pathname));
   }, []);
 
   const shareText = shareUrl ? t("shareText", { url: shareUrl }) : "";
@@ -25,6 +25,10 @@ export function WaitlistSuccess() {
   const whatsappClass = whatsappHref
     ? "ember-button ember-button--block"
     : "ember-button ember-button--block ember-button--pending";
+
+  function handleWhatsappClick() {
+    trackEvent("share_whatsapp");
+  }
 
   async function handleCopy() {
     if (!shareUrl) {
@@ -54,6 +58,7 @@ export function WaitlistSuccess() {
           href={whatsappHref}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={handleWhatsappClick}
         >
           {t("shareWhatsapp")}
         </a>

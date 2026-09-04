@@ -5,19 +5,24 @@ import {
   type FormEvent,
   useState,
 } from "react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { withBasePath } from "@/lib/base-path";
+import type { AppLocale } from "@/i18n/routing";
+import { refFromSearch } from "@/lib/waitlist-share";
 import { WaitlistSuccess } from "./waitlist-success";
 
 type FormStatus = "idle" | "sending" | "success" | "empty" | "invalid" | "error";
+type ParrillaChoice = "" | "yes" | "not_yet";
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export function WaitlistForm() {
   const t = useTranslations("waitlist");
+  const locale = useLocale() as AppLocale;
   const [email, setEmail] = useState("");
   const [country, setCountry] = useState("");
+  const [parrilla, setParrilla] = useState<ParrillaChoice>("");
   const [honeypot, setHoneypot] = useState("");
   const [status, setStatus] = useState<FormStatus>("idle");
 
@@ -30,6 +35,10 @@ export function WaitlistForm() {
 
   function handleCountryChange(event: ChangeEvent<HTMLSelectElement>) {
     setCountry(event.target.value);
+  }
+
+  function handleParrillaChange(event: ChangeEvent<HTMLSelectElement>) {
+    setParrilla(event.target.value as ParrillaChoice);
   }
 
   function handleHoneypotChange(event: ChangeEvent<HTMLInputElement>) {
@@ -59,6 +68,9 @@ export function WaitlistForm() {
         body: JSON.stringify({
           email: trimmed,
           country: country || undefined,
+          parrilla: parrilla || undefined,
+          ref: refFromSearch(window.location.search),
+          locale,
           website: honeypot,
         }),
       });
@@ -113,6 +125,20 @@ export function WaitlistForm() {
           <option value="AR">{t("countryAr")}</option>
           <option value="ES">{t("countryEs")}</option>
           <option value="OTHER">{t("countryOther")}</option>
+        </select>
+      </label>
+
+      <label className="field">
+        <span>{t("parrillaLabel")}</span>
+        <select
+          name="parrilla"
+          value={parrilla}
+          onChange={handleParrillaChange}
+          disabled={isSending}
+        >
+          <option value="">{t("parrillaNone")}</option>
+          <option value="yes">{t("parrillaYes")}</option>
+          <option value="not_yet">{t("parrillaNotYet")}</option>
         </select>
       </label>
 

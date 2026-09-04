@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { resolveLocale } from "@/i18n/locale";
+import { languageAlternates, localeUrl } from "@/lib/locale-url";
 
 type PrivacyPageProps = {
   params: Promise<{ locale: string }>;
@@ -12,9 +13,15 @@ export async function generateMetadata({
   const locale = resolveLocale((await params).locale);
   const t = await getTranslations({ locale, namespace: "privacyPage" });
 
+  const path = "/privacidad";
+
   return {
     title: t("metaTitle"),
     description: t("metaDescription"),
+    alternates: {
+      canonical: localeUrl(locale, path),
+      languages: languageAlternates(path),
+    },
   };
 }
 

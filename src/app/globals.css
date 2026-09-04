@@ -207,6 +207,10 @@ ul {
   line-height: 1.5;
 }
 
+.article .ghost-link {
+  color: var(--ink);
+}
+
 .form {
   display: flex;
   flex-direction: column;

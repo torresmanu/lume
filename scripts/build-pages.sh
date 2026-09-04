@@ -1,49 +1,41 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# GitHub Pages is static: skip next-intl middleware for this build, then restore it.
-middleware="src/middleware.ts"
-skipped="src/middleware.skipped.ts"
-api_dir="src/app/api"
-api_skipped="src/app/_api.skipped"
+# GitHub Pages cannot run POST /api/waitlist. Publish a pointer to the
+# canonical host so old shares do not collect dead emails.
+canonical="${CANONICAL_SITE_URL:-https://lumefuego.com}"
+canonical="${canonical%/}"
 
-if [[ -f "$middleware" ]]; then
-  mv "$middleware" "$skipped"
-fi
-if [[ -d "$api_dir" ]]; then
-  mv "$api_dir" "$api_skipped"
-fi
+python3 - "$canonical" <<'PY'
+from pathlib import Path
+import html
+import json
+import sys
 
-restore() {
-  if [[ -f "$skipped" ]]; then
-    mv "$skipped" "$middleware"
-  fi
-  if [[ -d "$api_skipped" ]]; then
-    mv "$api_skipped" "$api_dir"
-  fi
-}
-trap restore EXIT
+canonical = sys.argv[1]
+href = canonical + "/"
+escaped = html.escape(href)
+script_url = json.dumps(href)
 
-npm run pdf
-npx next build
-
-touch out/.nojekyll
-
-# Root of the Pages site should land on the Argentine story.
-cat > out/index.html <<EOF
-<!DOCTYPE html>
+out = Path("out")
+out.mkdir(parents=True, exist_ok=True)
+page = f"""<!DOCTYPE html>
 <html lang="es-AR">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="refresh" content="0;url=es-AR/" />
-    <link rel="canonical" href="es-AR/" />
+    <meta http-equiv="refresh" content="0;url={escaped}" />
+    <link rel="canonical" href="{escaped}" />
+    <meta name="robots" content="noindex, nofollow" />
     <title>Lume</title>
-    <script>location.replace("es-AR/");</script>
+    <script>location.replace({script_url});</script>
   </head>
   <body>
-    <p><a href="es-AR/">Lume</a></p>
+    <p><a href="{escaped}">Lume vive en {html.escape(canonical)}</a></p>
   </body>
 </html>
-EOF
-
-cp out/index.html out/404.html
+"""
+(out / "index.html").write_text(page, encoding="utf-8")
+(out / "404.html").write_text(page, encoding="utf-8")
+(out / "robots.txt").write_text("User-agent: *\nDisallow: /\n", encoding="utf-8")
+(out / ".nojekyll").write_text("", encoding="utf-8")
+PY

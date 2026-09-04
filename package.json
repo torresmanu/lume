@@ -10,6 +10,7 @@
     "pdf": "tsx scripts/generate-consorcio-pdf.ts"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "next": "^15.5.2",
     "next-intl": "^4.3.4",
     "pdf-lib": "^1.17.1",

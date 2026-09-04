@@ -1,0 +1,144 @@
+{
+  "meta": {
+    "title": "Lume — No te despidas",
+    "description": "Extractor para la parrilla del balcón. Carbón, sin conductos, sin pelea. Avísame cuando esté listo.",
+    "ogImageAlt": "Chimichurri y carbón sobre la mesa, listos para un domingo."
+  },
+  "nav": {
+    "home": "Inicio",
+    "consorcio": "Comunidad",
+    "preguntas": "Preguntas",
+    "privacy": "Privacidad",
+    "avisame": "Avísame",
+    "localeAr": "AR",
+    "localeEs": "ES",
+    "localeEn": "EN",
+    "localeLabel": "Idioma"
+  },
+  "hero": {
+    "kicker": "El primer domingo",
+    "headline": "No te despidas del asado.",
+    "sub": "No empieces saludando al problema. Di hola a Lume.",
+    "cta": "Avísame cuando esté listo",
+    "ghost": "Ver cómo funciona",
+    "imageAlt": "Dos personas sostienen la caja de Lume: extractor modular para parrilla."
+  },
+  "oldScript": {
+    "kicker": "El guion de siempre",
+    "headline": "Dos saludos que no queremos dar.",
+    "goodbyeTitle": "Adiós al asado",
+    "goodbyeBody": "Cajas en el rellano. El patio no entra en el piso. Cierras la ventana y te dices que ya está.",
+    "helloTitle": "Hola al conflicto",
+    "helloBody": "El teléfono boca abajo. El grupo de la comunidad. Nadie grita en esta foto: el miedo alcanza."
+  },
+  "object": {
+    "kicker": "Hola, Lume",
+    "headline": "El objeto.",
+    "body": "Extractor para la barbacoa del balcón. Captura el humo en la parrilla — también a carbón. Hechos, no teatro.",
+    "facts": {
+      "coal": "Carbón.",
+      "ducts": "Sin conductos.",
+      "drill": "Sin taladro.",
+      "knob": "Un mando."
+    },
+    "cta": "Avísame cuando esté listo",
+    "knobAlt": "Mando de Lume, metal y brasa, sobre carbón.",
+    "cleanAlt": "Bandeja y filtro de Lume lavándose en el fregadero."
+  },
+  "domingo": {
+    "kicker": "El primer domingo",
+    "headline": "Un domingo con fuego. En el piso.",
+    "body": "Mesa, manos, luz tarde. La ventana de al lado, abierta. El edificio sigue siendo un edificio.",
+    "cta": "Avísame cuando esté listo",
+    "civicAlt": "Balcón de noche: alguien cocina y la ventana del vecino queda abierta.",
+    "goldenAlt": "Asado al atardecer en un balcón, mesa puesta, carbón encendido."
+  },
+  "building": {
+    "kicker": "Para el edificio",
+    "headline": "Una cortesía, no un permiso.",
+    "quote": "Lume no habilita el fuego. Hace el fuego más civil, cuando el fuego está permitido.",
+    "body": "El reglamento manda. Si el carbón está prohibido, Lume no lo habilita. La nota es para la comunidad: qué es, qué no promete, y que el vecino sigue siendo un vecino.",
+    "cta": "Nota para la comunidad"
+  },
+  "waitlist": {
+    "kicker": "Avísame",
+    "headline": "Te avisamos cuando Lume esté listo.",
+    "emailLabel": "Correo",
+    "emailPlaceholder": "tu@correo.com",
+    "countryLabel": "País (opcional)",
+    "countryNone": "Elige un país",
+    "countryAr": "Argentina",
+    "countryEs": "España",
+    "countryOther": "Otro",
+    "parrillaLabel": "¿Ya tienes parrilla en el balcón? (opcional)",
+    "parrillaNone": "Prefiero no decirlo",
+    "parrillaYes": "Sí",
+    "parrillaNotYet": "Todavía no",
+    "submit": "Avísame",
+    "sending": "Enviando…",
+    "successTitle": "Listo.",
+    "successBody": "Te escribimos cuando Lume esté listo. Si hay asado en el edificio, avísale a un vecino.",
+    "shareWhatsapp": "Avísale a un vecino",
+    "shareText": "No te despidas del asado. Lume es un extractor para la parrilla del balcón — carbón, sin conductos. Apúntate para el primer domingo: {url}",
+    "shareCopy": "Copiar el enlace",
+    "shareCopied": "Enlace copiado.",
+    "shareCopyError": "No se pudo copiar. Prueba de nuevo.",
+    "shareSave": "Guardar la foto",
+    "empty": "Necesitamos un correo para avisarte.",
+    "invalid": "Ese correo no se ve bien. Prueba de nuevo.",
+    "error": "No pudimos anotar el correo. Reinténtalo en un momento.",
+    "privacy": "Por qué pedimos un mail",
+    "honeypot": "Deja este campo vacío",
+    "imageAlt": "Chimichurri y carbón sobre la mesa, listos para un domingo."
+  },
+  "footer": {
+    "tagline": "Lume — para el fuego",
+    "consorcio": "Comunidad",
+    "preguntas": "Preguntas",
+    "privacy": "Privacidad"
+  },
+  "consorcioPage": {
+    "metaTitle": "Nota para la comunidad — Lume",
+    "metaDescription": "Una cortesía para el edificio. Qué es Lume, qué no promete, y que el fuego sigue siendo responsabilidad de quien enciende.",
+    "download": "Descargar PDF",
+    "downloading": "Preparando el PDF…",
+    "downloadError": "No pudimos bajar el PDF. Esta página es la nota: imprímela o reenvíala así.",
+    "print": "Imprimir esta página"
+  },
+  "privacyPage": {
+    "metaTitle": "Privacidad — Lume",
+    "metaDescription": "Por qué Lume pide un correo y qué hacemos con él.",
+    "title": "Por qué pedimos un mail",
+    "lead": "Queremos avisarte cuando Lume esté listo para el primer domingo. Nada más.",
+    "whatTitle": "Qué guardamos",
+    "whatBody": "El correo que nos dejas. Si quieres, el país, si ya tienes parrilla, y si un vecino te pasó el enlace. Fecha de inscripción. No pedimos teléfono ni dirección.",
+    "whyTitle": "Para qué",
+    "whyBody": "Para escribirte cuando el objeto esté listo en Argentina o en España, y para saber de qué crate hablar. No vendemos la lista. No armamos un perfil.",
+    "leaveTitle": "Si te arrepientes",
+    "leaveBody": "Responde el mail de aviso y pide que te borremos. Lo hacemos.",
+    "contact": "Preguntas: hola@lumefuego.com — un humano, no un bot."
+  },
+  "faqPage": {
+    "metaTitle": "Preguntas — Lume",
+    "metaDescription": "¿Se puede hacer barbacoa en el piso? Qué es Lume, qué no promete, y la nota para la comunidad.",
+    "kicker": "Preguntas",
+    "title": "Lo que suele preguntarse.",
+    "lead": "El reglamento manda. Nosotros no hacemos milagros ni permisos. Aquí, con calma.",
+    "q1": "¿Puedo hacer asado en el balcón?",
+    "a1": "Depende del reglamento de tu comunidad y de no molestar en exceso a los vecinos. En España el humo puede ser una actividad molesta. Lume no cambia esa regla: hace el fuego más civil, cuando el fuego está permitido. La barbacoa es el acto; el asado, el rito.",
+    "q2": "¿Y si el reglamento prohíbe el carbón?",
+    "a2": "Lume no habilita el fuego. Si la comunidad prohíbe carbón, el objeto no lo legaliza. La nota para el edificio dice exactamente eso, para que un presidente pueda reenviarla sin sorpresas.",
+    "q3": "¿Es una barbacoa sin humo?",
+    "a3": "No. Esa góndola es de placas eléctricas. Lume captura humo en la parrilla — también a carbón — y reduce la pluma y el olor que salen del balcón. No prometemos el milagro de “sin humo”.",
+    "q4": "¿Hay que romper la fachada?",
+    "a4": "No. Sin conductos. Sin taladro en partes comunes. Es un aparato de uso doméstico, con enchufe normal. Quien cocina sigue al lado, hablando.",
+    "q5": "¿Sirve para una parrilla de verdad?",
+    "a5": "Está hecho para carbón. Si solo funcionara sobre inducción, no sería Lume. Úsalo sobre tu parrilla, en el balcón, no como campana de una cocina cerrada.",
+    "q6": "¿Qué le digo a la comunidad?",
+    "a6": "Envíales la nota. Es una cortesía, no un permiso: qué es, qué no promete, y que el vecino sigue siendo un vecino.",
+    "q7": "¿Cuándo se puede comprar?",
+    "a7": "Todavía no. Déjanos un correo y te avisamos cuando el primer domingo esté listo en Argentina o en España.",
+    "consorcioCta": "Nota para la comunidad",
+    "waitlistCta": "Avísame cuando esté listo"
+  }
+}
