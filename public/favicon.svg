@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Lume">
-  <rect width="32" height="32" fill="#1C1917"/>
-  <rect x="10" y="22" width="12" height="2" fill="#C45C26"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" role="img" aria-label="Lume">
+  <title>Lume</title>
+  <!-- 16px grid: charcoal tile, field L (hood in profile), one ember. -->
+  <rect width="16" height="16" rx="3" fill="#1C1917"/>
+  <path fill="#F4F0EA" d="M5 3h2v5h5v2H5V3z"/>
+  <rect x="6" y="11" width="5" height="2" rx="1" fill="#C45C26"/>
 </svg>

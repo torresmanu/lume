@@ -42,7 +42,17 @@ export async function generateMetadata({
     metadataBase: new URL(siteUrl()),
     title: t("title"),
     description: t("description"),
-    icons: { icon: withBasePath("/favicon.svg") },
+    icons: {
+      icon: [
+        { url: withBasePath("/favicon.ico"), sizes: "16x16 32x32 48x48" },
+        { url: withBasePath("/favicon.svg"), type: "image/svg+xml" },
+      ],
+      apple: {
+        url: withBasePath("/apple-touch-icon.png"),
+        sizes: "180x180",
+        type: "image/png",
+      },
+    },
     alternates: {
       canonical: pageUrl,
       languages: languageAlternates("/"),
