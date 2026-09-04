@@ -151,32 +151,76 @@ async function persistToResend(entry: WaitlistEntry): Promise<boolean> {
     "Content-Type": "application/json",
   };
 
-  const properties = contactProperties(entry);
-
   try {
-    // Resend contacts are global. Create first, then attach the waitlist
-    // segment (RESEND_AUDIENCE_ID still holds that UUID).
-    const created = await fetch("https://api.resend.com/contacts", {
-      method: "POST",
-      headers,
-      body: JSON.stringify({
-        email: entry.email,
-        unsubscribed: false,
-        ...(properties ? { properties } : {}),
-      }),
-    });
-
-    if (!created.ok && created.status !== 409) {
-      console.error("Resend waitlist contact create failed", {
-        status: created.status,
-        ...(await resendErrorSummary(created)),
-      });
+    // Resend rejects unknown custom properties. Create the contact first;
+    // metadata stays in JSONL. Properties are best-effort after the person is saved.
+    const created = await createResendContact(entry.email, headers);
+    if (!created) {
       return false;
     }
 
-    return addContactToSegment(entry.email, segmentId, headers);
+    const attached = await addContactToSegment(entry.email, segmentId, headers);
+    if (!attached) {
+      return false;
+    }
+
+    await patchResendProperties(entry, headers);
+    return true;
   } catch {
     return false;
+  }
+}
+
+async function createResendContact(
+  email: string,
+  headers: { Authorization: string; "Content-Type": string },
+): Promise<boolean> {
+  const created = await fetch("https://api.resend.com/contacts", {
+    method: "POST",
+    headers,
+    body: JSON.stringify({
+      email,
+      unsubscribed: false,
+    }),
+  });
+
+  if (created.ok || created.status === 409) {
+    return true;
+  }
+
+  console.error("Resend waitlist contact create failed", {
+    status: created.status,
+    ...(await resendErrorSummary(created)),
+  });
+  return false;
+}
+
+async function patchResendProperties(
+  entry: WaitlistEntry,
+  headers: { Authorization: string; "Content-Type": string },
+): Promise<void> {
+  const properties = contactProperties(entry);
+  if (!properties) {
+    return;
+  }
+
+  try {
+    const updated = await fetch(
+      `https://api.resend.com/contacts/${encodeURIComponent(entry.email)}`,
+      {
+        method: "PATCH",
+        headers,
+        body: JSON.stringify({ properties }),
+      },
+    );
+    if (!updated.ok && updated.status !== 404) {
+      console.error("Resend waitlist properties skipped", {
+        status: updated.status,
+        ...(await resendErrorSummary(updated)),
+      });
+    }
+  } catch {
+    // Properties must never fail the waitlist.
   }
 }
 
