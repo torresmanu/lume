@@ -10,7 +10,7 @@ export const consorcioNote = {
   sections: [
     {
       heading: "Qué es",
-      body: "Un aparato de uso doméstico, con enchufe normal. Captura el humo en la parrilla — también a carbón. Sin conductos. Sin taladro en partes comunes. Quien cocina sigue al lado, hablando: no es un extractor de restaurante.",
+      body: "Un aparato de uso doméstico, con enchufe normal. Captura el humo en la parrilla — también a carbón. Sin conductos. Sin taladro en partes comunes. Quien cocina sigue al lado, hablando. No es un extractor de restaurante.",
     },
     {
       heading: "En el edificio",
@@ -23,5 +23,5 @@ export const consorcioNote = {
   ],
   legal:
     "El humo, el olor y el calor no deben exceder la tolerancia normal entre vecinos. Argentina, CCyC art. 1973. España, Ley de Propiedad Horizontal art. 7.2. Lume es una cortesía, no un permiso.",
-  footer: "Lume · para el fuego · espacio para el vecino que lo usa",
+  footer: "Lume · para el fuego",
 } as const;

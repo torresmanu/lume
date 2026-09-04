@@ -16,6 +16,7 @@ export async function WaitlistSection() {
         <h2 id="waitlist-title" className="h1">
           {t("headline")}
         </h2>
+        <p className="body">{t("lead")}</p>
         <WaitlistForm />
       </div>
     </section>

@@ -12,9 +12,9 @@ type WelcomeCopy = {
 
 const COPY: Record<AppLocale, WelcomeCopy> = {
   "es-AR": {
-    subject: "Listo. Te avisamos.",
+    subject: "Anotado. Te avisamos.",
     title: "Listo.",
-    body: "Anotamos tu correo. Cuando Lume esté listo para el primer domingo, te escribimos.",
+    body: "Cuando Lume esté listo para el primer domingo, te escribimos. Ese es el único motivo de este correo.",
     consorcio: "Si querés mostrarle la nota al consorcio, está acá:",
     leave: "Si te arrepentís, respondé este mail y te borramos.",
     signoff: "Lume — para el fuego",
@@ -22,7 +22,7 @@ const COPY: Record<AppLocale, WelcomeCopy> = {
   "es-ES": {
     subject: "Listo. Te avisamos.",
     title: "Listo.",
-    body: "Anotamos tu correo. Cuando Lume esté listo para el primer domingo, te escribimos.",
+    body: "Cuando Lume esté listo para el primer domingo, te escribimos. Ese es el único motivo de este correo.",
     consorcio: "Si quieres mostrarle la nota a la comunidad, está aquí:",
     leave: "Si te arrepientes, responde este mail y te borramos.",
     signoff: "Lume — para el fuego",
@@ -30,7 +30,7 @@ const COPY: Record<AppLocale, WelcomeCopy> = {
   en: {
     subject: "You're in. We'll write.",
     title: "You're in.",
-    body: "We saved your address. When Lume is ready for the first Sunday, we'll write.",
+    body: "When Lume is ready for the first Sunday, we'll write. That is the only reason we have this address.",
     consorcio: "If you want to show the building the note, it is here:",
     leave: "If you change your mind, reply and ask to be removed.",
     signoff: "Lume — for the fire",

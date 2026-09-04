@@ -14,7 +14,7 @@ Lume es un extractor para la parrilla del balcón. Reduce el humo y el olor que 
 
 ## Qué es
 
-Un aparato de uso doméstico, con enchufe normal. Captura el humo en la parrilla — también a carbón. Sin conductos. Sin taladro en partes comunes. Quien cocina sigue al lado, hablando: no es un extractor de restaurante.
+Un aparato de uso doméstico, con enchufe normal. Captura el humo en la parrilla — también a carbón. Sin conductos. Sin taladro en partes comunes. Quien cocina sigue al lado, hablando. No es un extractor de restaurante.
 
 ## En el edificio
 
@@ -28,4 +28,4 @@ No legaliza el fuego. No elimina el humo por completo. No sustituye una campana 
 
 El humo, el olor y el calor no deben exceder la tolerancia normal entre vecinos. Argentina, CCyC art. 1973. España, Ley de Propiedad Horizontal art. 7.2. Lume es una cortesía, no un permiso.
 
-Lume · para el fuego · espacio para el vecino que lo usa
+Lume · para el fuego

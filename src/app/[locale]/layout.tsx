@@ -94,7 +94,7 @@ export default async function LocaleLayout({
       <body>
         <NextIntlClientProvider messages={messages}>
           <a className="skip-link" href="#contenido">
-            {t("home")}
+            {t("skip")}
           </a>
           <SiteHeader />
           {children}

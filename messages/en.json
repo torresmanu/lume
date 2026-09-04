@@ -1,15 +1,16 @@
 {
   "meta": {
     "title": "Lume — Don’t say goodbye",
-    "description": "A balcony grill extractor. Charcoal, no ducts, no fight. Tell us when to write.",
+    "description": "Don’t say goodbye to Sunday. A balcony grill extractor: charcoal, no ducts, no drilling. We’ll write when it’s ready.",
     "ogImageAlt": "Chimichurri and charcoal on the table, ready for Sunday."
   },
   "nav": {
     "home": "Home",
-    "consorcio": "Building note",
+    "skip": "Skip to content",
+    "consorcio": "For the building",
     "preguntas": "Questions",
     "privacy": "Privacy",
-    "avisame": "Tell me",
+    "avisame": "Let me know",
     "localeAr": "AR",
     "localeEs": "ES",
     "localeEn": "EN",
@@ -17,39 +18,39 @@
   },
   "hero": {
     "kicker": "The first Sunday",
-    "headline": "Don’t say goodbye to asado.",
-    "sub": "Don’t start with a fight. Hello, Lume.",
-    "cta": "Tell me when it’s ready",
+    "headline": "Don’t say goodbye to Sunday.",
+    "sub": "Don’t start with a fight. Lume captures smoke at the balcony grill — charcoal included.",
+    "cta": "Let me know when it’s ready",
     "ghost": "See how it works",
-    "imageAlt": "Two people holding the Lume crate: a modular extractor for the grill."
+    "imageAlt": "Two people holding the Lume box, ready for the balcony."
   },
   "oldScript": {
     "kicker": "The usual script",
-    "headline": "Two hellos we refuse.",
+    "headline": "First the goodbye. Then the fight.",
     "goodbyeTitle": "Goodbye to asado",
-    "goodbyeBody": "Boxes in the landing. The patio does not fit in the flat. You close the window and tell yourself that’s that.",
+    "goodbyeBody": "Boxes in the landing. The patio does not fit in the flat. You close the window and tell yourself the asado stayed behind.",
     "helloTitle": "Hello to the fight",
-    "helloBody": "The phone face-down. The building chat. Nobody is shouting in this picture. Fear is enough."
+    "helloBody": "The phone face-down. The building chat. Nobody has to shout. Fear is enough."
   },
   "object": {
     "kicker": "Hello, Lume",
-    "headline": "The object.",
-    "body": "An extractor for the balcony grill. It captures smoke at the grate — charcoal included. Facts, not theatre.",
+    "headline": "The charcoal is yours. The smoke stays.",
+    "body": "An extractor for the balcony grill. It captures smoke at the grate — charcoal included. The neighbour can leave the window open.",
     "facts": {
       "coal": "Charcoal.",
       "ducts": "No ducts.",
       "drill": "No drilling.",
       "knob": "One knob."
     },
-    "cta": "Tell me when it’s ready",
-    "knobAlt": "Lume’s ember knob on charcoal.",
+    "cta": "Let me know when it’s ready",
+    "knobAlt": "Lume’s knob on lit charcoal.",
     "cleanAlt": "Lume’s tray and filter in the sink."
   },
   "domingo": {
     "kicker": "The first Sunday",
     "headline": "Asado Sunday. Here too.",
-    "body": "Table, hands, late light. The window next door stays open. The building is still a building.",
-    "cta": "Tell me when it’s ready",
+    "body": "Table, hands, late light. You invite people. The window next door stays open. The building is still a building.",
+    "cta": "Let me know when it’s ready",
     "civicAlt": "Night balcony: someone is cooking and the neighbour’s window is open.",
     "goldenAlt": "Golden-hour asado on a balcony, table set, charcoal lit."
   },
@@ -57,12 +58,13 @@
     "kicker": "For the building",
     "headline": "A courtesy, not a permit.",
     "quote": "Lume does not legalise fire. It makes fire more civil, when fire is allowed.",
-    "body": "The bylaws decide. If charcoal is banned, Lume does not enable it. The note is for the building: what it is, what it does not promise, and that the neighbour stays a neighbour.",
+    "body": "The bylaws decide. If charcoal is banned, Lume does not enable it. The note is for the building: what it is, what it does not promise, and that the neighbour stays a neighbour. Forward it as it is.",
     "cta": "Note for the building"
   },
   "waitlist": {
-    "kicker": "Tell me",
-    "headline": "We'll tell you when Lume is ready.",
+    "kicker": "Let me know",
+    "headline": "Get in line for the first Sunday.",
+    "lead": "An email is enough. We’ll write when Lume is ready.",
     "emailLabel": "Email",
     "emailPlaceholder": "you@email.com",
     "countryLabel": "Country (optional)",
@@ -74,17 +76,17 @@
     "parrillaNone": "Prefer not to say",
     "parrillaYes": "Yes",
     "parrillaNotYet": "Not yet",
-    "submit": "Tell me",
+    "submit": "Let me know",
     "sending": "Sending…",
-    "successTitle": "You're in.",
-    "successBody": "We'll write when Lume is ready. If there's an asado in the building, tell a neighbour.",
+    "successTitle": "You’re in.",
+    "successBody": "We’ll write when Lume is ready. If there’s an asado in the building, tell a neighbour — they might want Sunday too.",
     "shareWhatsapp": "Tell a neighbour",
-    "shareText": "Don't say goodbye to asado. Lume is a balcony grill extractor — charcoal, no ducts. Get in line for the first Sunday: {url}",
+    "shareText": "Don't say goodbye to Sunday. Lume is a balcony grill extractor — charcoal, no ducts. Get in line for the first Sunday: {url}",
     "shareCopy": "Copy the link",
-    "shareCopied": "Link copied.",
+    "shareCopied": "Copied. You can paste it now.",
     "shareCopyError": "Could not copy. Try again.",
     "shareSave": "Save the photo",
-    "empty": "We need an email to write to you.",
+    "empty": "Leave an email so we can write to you.",
     "invalid": "That email does not look right. Try again.",
     "error": "We could not save the address. Please try again in a moment.",
     "privacy": "Why we ask for an email",
@@ -93,14 +95,14 @@
   },
   "footer": {
     "tagline": "Lume — for the fire",
-    "consorcio": "Building note",
+    "consorcio": "For the building",
     "preguntas": "Questions",
     "privacy": "Privacy"
   },
   "consorcioPage": {
     "metaTitle": "Note for the building — Lume",
     "metaDescription": "A courtesy for the building. What Lume is, what it does not promise, and that fire stays the cook’s responsibility.",
-    "download": "Download PDF",
+    "download": "Download to forward",
     "downloading": "Preparing the PDF…",
     "downloadError": "We could not download the PDF. This page is the note: print it or forward it as it is.",
     "print": "Print this page"
@@ -113,7 +115,7 @@
     "whatTitle": "What we keep",
     "whatBody": "The address you leave. If you want, the country, whether you already have a grill, and whether a neighbour sent you. The date you joined. No phone. No street address.",
     "whyTitle": "What for",
-    "whyBody": "To write when the object is ready in Argentina or Spain, and to know which crate to talk about. We do not sell the list. We do not build a profile.",
+    "whyBody": "To write when it is ready in Argentina or Spain, and to know where to start. We do not sell the list. We do not build a profile.",
     "leaveTitle": "If you change your mind",
     "leaveBody": "Reply to the notice and ask to be removed. We will.",
     "contact": "Questions: hola@lumefuego.com — a person, not a bot."
@@ -122,12 +124,12 @@
     "metaTitle": "Questions — Lume",
     "metaDescription": "Can you grill on a balcony? What Lume is, what it does not promise, and the note for the building.",
     "kicker": "Questions",
-    "title": "What people usually ask.",
-    "lead": "The bylaws decide. We do not sell miracles or permits. Here, calmly.",
+    "title": "What you need to know.",
+    "lead": "The bylaws decide. No miracles. No permits. Here, calmly.",
     "q1": "Can I make asado on the balcony?",
-    "a1": "It depends on your building rules and on not being a problem for the neighbours. Smoke and smell must stay within ordinary tolerance. Lume does not change that rule: it makes fire more civil, when fire is allowed.",
+    "a1": "It depends on your building rules, and on staying within ordinary neighbourly tolerance. Smoke and smell must not go past that. Lume does not change the rule: it makes fire more civil, when fire is allowed.",
     "q2": "What if charcoal is banned?",
-    "a2": "Lume does not legalise fire. If the building forbids charcoal, the object does not enable it. The note for the building says exactly that, so a chairperson can forward it without surprises.",
+    "a2": "Lume does not legalise fire. If the building forbids charcoal, this does not enable it. The note for the building says exactly that, so a chairperson can forward it without surprises.",
     "q3": "Is it smokeless?",
     "a3": "No. That aisle is electric plates. Lume captures smoke at the grate — charcoal included — and reduces the plume and odour leaving the balcony. We do not promise a miracle.",
     "q4": "Do I have to drill the façade?",
@@ -137,8 +139,8 @@
     "q6": "What do I tell the building?",
     "a6": "Send them the note. It is a courtesy, not a permit: what it is, what it does not promise, and that the neighbour stays a neighbour.",
     "q7": "When can I buy one?",
-    "a7": "Not yet. Leave an email and we will write when the first Sunday is ready in Argentina or Spain.",
+    "a7": "Not yet. Leave an email and we will write when it is ready in Argentina or Spain.",
     "consorcioCta": "Note for the building",
-    "waitlistCta": "Tell me when it’s ready"
+    "waitlistCta": "Let me know when it’s ready"
   }
 }
