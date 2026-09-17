@@ -8,13 +8,14 @@ Canonical site: [https://lumefuego.com](https://lumefuego.com)
 
 ## Brand book
 
-Working file: [Lume Brand Book](https://www.figma.com/design/YY8oBll09e9wuyqoXpTY1Q)
+Working file: [Lume Brand Book](https://www.figma.com/design/nHVRXhCWmjrwd9MTGiGSYF)
 
-Web frames live on page **13 Web**.
+Compass is page **01**. Contents, palette, icons, digital, applied examples, and components are in the same file. The previous book remains at [archive](https://www.figma.com/design/YY8oBll09e9wuyqoXpTY1Q).
 
 Source of truth in this repo:
 
 - `brand/tokens.json` — colour, type, space
+- `brand/product.md` — object, CMF, controls (for CAD)
 - `brand/voice.md` — name, voice, Spanish rules
 - `brand/claims.md` — what we will and will not say
 - `brand/consorcio.md` — one-pager for the building (A4, Neutral Spanish)
