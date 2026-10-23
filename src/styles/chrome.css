@@ -95,6 +95,10 @@
   background: var(--field);
 }
 
+.site-footer .footer-links {
+  flex-wrap: wrap;
+}
+
 .site-footer .locale-switch {
   background: color-mix(in srgb, var(--ink) 6%, transparent);
 }

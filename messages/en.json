@@ -2,7 +2,8 @@
   "meta": {
     "title": "Lume — Don’t say goodbye",
     "description": "Don’t say goodbye to Sunday. A balcony grill extractor: charcoal, no ducts, no drilling. We’ll write when it’s ready.",
-    "ogImageAlt": "Chimichurri and charcoal on the table, ready for Sunday."
+    "ogImageAlt": "Chimichurri and charcoal on the table, ready for Sunday.",
+    "entity": "Lume is a charcoal-capable extractor for a balcony grill. No ducts, no drilling. It reduces the smoke and odour that leave. It does not eliminate smoke, and it does not allow fire where the building forbids it."
   },
   "nav": {
     "home": "Home",
@@ -97,7 +98,29 @@
     "tagline": "Lume — for the fire",
     "consorcio": "For the building",
     "preguntas": "Questions",
+    "guides": "Guides",
     "privacy": "Privacy"
+  },
+  "guides": {
+    "metaTitle": "Grill extractor, smoke, and balcony rules — Lume",
+    "metaDescription": "Balcony grill extractor, smoke laws, building rules, and neighbour complaints in Argentina and Spain.",
+    "kicker": "Guides",
+    "title": "Smoke, grills, and neighbours.",
+    "lead": "Five questions people already ask: a grill extractor, barbecue on a balcony, the law on smoke, smoke in the building, and complaints between neighbours. In Spanish: extractor para parrilla, asado en el balcón, ley sobre el humo, humo en el consorcio, vecinos y denuncias.",
+    "breadcrumb": "Breadcrumb",
+    "crumbsHome": "Home",
+    "related": "Keep reading",
+    "faqTitle": "Questions",
+    "sourcesTitle": "Official texts",
+    "updated": "Updated {date}",
+    "disclaimer": "General information, not legal advice. Your building’s rules decide the case. We do not draft complaints or say who wins.",
+    "consorcioCta": "Note for the building",
+    "waitlistCta": "Let me know when it’s ready",
+    "faqMoreTitle": "Each topic, in full",
+    "faqMoreLead": "The short answer is above. These pages are written so they can be quoted.",
+    "noteMoreTitle": "The rules, if someone asks",
+    "noteMoreLead": "The note above is the one to forward. These pages explain the law and the complaints, and they do not turn Lume into a permit.",
+    "empty": "There are no guides to show."
   },
   "consorcioPage": {
     "metaTitle": "Note for the building — Lume",

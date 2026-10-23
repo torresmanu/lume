@@ -10,6 +10,7 @@ export async function SiteFooter() {
       <p>{t("tagline")}</p>
       <div className="footer-links">
         <Link href="/preguntas">{t("preguntas")}</Link>
+        <Link href="/guias">{t("guides")}</Link>
         <Link href="/consorcio">{t("consorcio")}</Link>
         <Link href="/privacidad">{t("privacy")}</Link>
         <LocaleSwitch />

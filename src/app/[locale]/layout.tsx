@@ -9,7 +9,9 @@ import { SiteHeader } from "@/components/site-header";
 import { resolveLocale } from "@/i18n/locale";
 import { routing } from "@/i18n/routing";
 import { withBasePath } from "@/lib/base-path";
-import { languageAlternates, localeUrl } from "@/lib/locale-url";
+import { JsonLd } from "@/components/json-ld";
+import { openGraphLocales, pageAlternates } from "@/lib/locale-url";
+import { siteJsonLd } from "@/lib/structured-data";
 import { siteUrl } from "@/lib/site";
 import "../globals.css";
 
@@ -36,12 +38,23 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const locale = resolveLocale((await params).locale);
   const t = await getTranslations({ locale, namespace: "meta" });
-  const pageUrl = localeUrl(locale, "/");
+  const alternates = pageAlternates(locale, "/");
 
   return {
     metadataBase: new URL(siteUrl()),
     title: t("title"),
     description: t("description"),
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+        "max-video-preview": -1,
+      },
+    },
     icons: {
       icon: [
         { url: withBasePath("/favicon.ico"), sizes: "16x16 32x32 48x48" },
@@ -53,17 +66,14 @@ export async function generateMetadata({
         type: "image/png",
       },
     },
-    alternates: {
-      canonical: pageUrl,
-      languages: languageAlternates("/"),
-    },
+    alternates,
     openGraph: {
       title: t("title"),
       description: t("description"),
       type: "website",
-      locale: locale.replace("-", "_"),
-      url: pageUrl,
+      url: alternates.canonical,
       siteName: "Lume",
+      ...openGraphLocales(locale),
       images: [
         {
           url: withBasePath("/images/still-life.webp"),
@@ -88,10 +98,12 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
   const messages = await getMessages();
   const t = await getTranslations("nav");
+  const meta = await getTranslations("meta");
 
   return (
     <html lang={locale} className={plexSans.variable}>
       <body>
+        <JsonLd data={siteJsonLd(meta("entity"))} />
         <NextIntlClientProvider messages={messages}>
           <a className="skip-link" href="#contenido">
             {t("skip")}

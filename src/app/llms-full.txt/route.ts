@@ -1,0 +1,13 @@
+import { renderLlmsFullTxt } from "@/lib/llms-txt";
+
+export const dynamic = "force-static";
+
+export function GET() {
+  return new Response(renderLlmsFullTxt(), {
+    headers: {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Cache-Control": "public, max-age=86400",
+      "X-Content-Type-Options": "nosniff",
+    },
+  });
+}

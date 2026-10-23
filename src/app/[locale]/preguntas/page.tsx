@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Link } from "@/i18n/navigation";
+import { ArticleActions } from "@/components/article-actions";
+import { GuideIndex } from "@/components/guide-index";
+import { JsonLd } from "@/components/json-ld";
 import { TrackPageEvent } from "@/components/track-page-event";
+import { getGuides } from "@/content/guides";
 import { resolveLocale } from "@/i18n/locale";
-import { languageAlternates, localeUrl } from "@/lib/locale-url";
+import { pageAlternates } from "@/lib/locale-url";
+import { faqPageJsonLd } from "@/lib/structured-data";
 
 const FAQ_BLOCKS = [
   { q: "q1", a: "a1" },
@@ -24,15 +28,10 @@ export async function generateMetadata({
 }: FaqPageProps): Promise<Metadata> {
   const locale = resolveLocale((await params).locale);
   const t = await getTranslations({ locale, namespace: "faqPage" });
-  const path = "/preguntas";
-
   return {
     title: t("metaTitle"),
     description: t("metaDescription"),
-    alternates: {
-      canonical: localeUrl(locale, path),
-      languages: languageAlternates(path),
-    },
+    alternates: pageAlternates(locale, "/preguntas"),
   };
 }
 
@@ -40,28 +39,40 @@ export default async function FaqPage({ params }: FaqPageProps) {
   const locale = resolveLocale((await params).locale);
   setRequestLocale(locale);
   const t = await getTranslations("faqPage");
+  const guides = await getTranslations("guides");
+  const faqs = FAQ_BLOCKS.map((block) => ({
+    question: t(block.q),
+    answer: t(block.a),
+  }));
 
   return (
     <main id="contenido" className="article">
       <TrackPageEvent event="faq_view" />
+      <JsonLd
+        data={faqPageJsonLd({
+          url: pageAlternates(locale, "/preguntas").canonical,
+          name: t("title"),
+          inLanguage: locale,
+          faqs,
+        })}
+      />
       <p className="kicker">{t("kicker")}</p>
       <h1 className="h1">{t("title")}</h1>
       <p className="body">{t("lead")}</p>
-      {FAQ_BLOCKS.map((block) => (
-        <FaqBlock
-          key={block.q}
-          question={t(block.q)}
-          answer={t(block.a)}
-        />
+      {faqs.map((faq) => (
+        <FaqBlock key={faq.question} question={faq.question} answer={faq.answer} />
       ))}
-      <div className="actions-row">
-        <Link href="/consorcio" className="ghost-link">
-          {t("consorcioCta")}
-        </Link>
-        <Link href={{ pathname: "/", hash: "avisame" }} className="ember-button">
-          {t("waitlistCta")}
-        </Link>
-      </div>
+      <GuideIndex
+        guides={getGuides(locale)}
+        label={guides("faqMoreTitle")}
+        heading={guides("faqMoreTitle")}
+        lead={guides("faqMoreLead")}
+        empty={guides("empty")}
+      />
+      <ArticleActions
+        consorcioCta={t("consorcioCta")}
+        waitlistCta={t("waitlistCta")}
+      />
     </main>
   );
 }

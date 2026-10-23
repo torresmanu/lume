@@ -17,3 +17,26 @@ export function languageAlternates(path: string): Record<string, string> {
     "x-default": localeUrl("es-AR", path),
   };
 }
+
+/** Canonical, hreflang, and a pointer to the agent map on every public page. */
+export function pageAlternates(locale: AppLocale, path: string) {
+  return {
+    canonical: localeUrl(locale, path),
+    languages: languageAlternates(path),
+    types: {
+      "text/plain": `${siteUrl()}/llms.txt`,
+    },
+  };
+}
+
+export function openGraphLocales(locale: AppLocale): {
+  locale: string;
+  alternateLocale: string[];
+} {
+  return {
+    locale: locale.replace("-", "_"),
+    alternateLocale: routing.locales
+      .filter((item) => item !== locale)
+      .map((item) => item.replace("-", "_")),
+  };
+}

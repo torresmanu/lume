@@ -35,7 +35,7 @@ Open [http://localhost:3000](http://localhost:3000).
 
 Waitlist addresses are appended to `data/waitlist.jsonl` (gitignored). In production, set `RESEND_API_KEY` and `RESEND_AUDIENCE_ID` so contacts land in a Resend audience, and `RESEND_FROM` so each signup gets a short welcome. Set `NEXT_PUBLIC_SITE_URL=https://lumefuego.com` so share links and Open Graph do not point at a preview host. Never log the address.
 
-The consorcio note is Neutral Spanish at `/consorcio`, with a PDF at `/consorcio.pdf`. Honest balcony questions live at `/preguntas`.
+The consorcio note is Neutral Spanish at `/consorcio`, with a PDF at `/consorcio.pdf`. Honest balcony questions live at `/preguntas`. The citable guides — extractor, asado en el balcón, the smoke law, humo en el consorcio, neighbours and complaints — live at `/guias`. Answer engines can start at `/llms.txt`.
 
 ## GitHub Pages
 

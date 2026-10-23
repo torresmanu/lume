@@ -31,7 +31,7 @@ Sunday grief or neighbour dread → story site → email + country + optional pa
 
 1. The machine. Capture, confirm, share preview. If these fail, every other channel wastes the click.
 2. Neighbour loop. Share `https://lumefuego.com` with `?ref=wa#avisame`. Host voice.
-3. Search that already exists. `/preguntas` answers “¿puedo hacer asado en el balcón?” without promising legality. `/consorcio` is the forwardable object.
+3. Search that already exists. `/preguntas` answers “¿puedo hacer asado en el balcón?” without promising legality. `/consorcio` is the forwardable object. `/guias` is what an agent should quote: extractor para parrilla, ley sobre el humo, humo en el consorcio, vecinos y denuncias, asado en el balcón. `/llms.txt` points at those pages. Never “smokeless”. Never a permit.
 4. Founder-led, 30 minutes a day. CABA asado groups, building groups, one still per Sunday. One URL only. Never “smokeless.”
 5. Earned media, weeks 3–8. Pitch the story TN / La Nación / Fotocasa already cover: the other first Sunday. Send the consorcio PDF, not capture percentages.
 6. Paid only after tracking works. Tiny Meta/IG, CABA, 25–45, asado/parrilla. Creative is the three-beat line. Landing is `#avisame`. Default: no ads in the first two weeks.

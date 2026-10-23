@@ -2,7 +2,8 @@
   "meta": {
     "title": "Lume — No te despidas",
     "description": "No te despidas del asado. Extractor para la parrilla del balcón: carbón, sin conductos, sin taladro. Avisame cuando esté listo.",
-    "ogImageAlt": "Chimichurri y carbón sobre la mesa, listos para un domingo."
+    "ogImageAlt": "Chimichurri y carbón sobre la mesa, listos para un domingo.",
+    "entity": "Lume es un extractor para la parrilla del balcón, también a carbón, sin conductos y sin taladro. Reduce el humo y el olor que salen. No elimina el humo y no habilita el fuego si el reglamento lo prohíbe."
   },
   "nav": {
     "home": "Inicio",
@@ -97,7 +98,29 @@
     "tagline": "Lume — para el fuego",
     "consorcio": "Consorcio",
     "preguntas": "Preguntas",
+    "guides": "Guías",
     "privacy": "Privacidad"
+  },
+  "guides": {
+    "metaTitle": "Extractor, humo y asado en el balcón — Lume",
+    "metaDescription": "Extractor para parrilla, ley sobre el humo, humo en el consorcio, asado en el balcón y denuncias entre vecinos.",
+    "kicker": "Guías",
+    "title": "Asado, humo y vecinos.",
+    "lead": "Cinco preguntas que ya se hacen: extractor para parrilla, asado en el balcón, la ley sobre el humo, el humo en el consorcio, y los vecinos y las denuncias.",
+    "breadcrumb": "Migas de pan",
+    "crumbsHome": "Inicio",
+    "related": "Seguir leyendo",
+    "faqTitle": "Preguntas",
+    "sourcesTitle": "Textos oficiales",
+    "updated": "Actualizado el {date}",
+    "disclaimer": "Información general, no un asesoramiento jurídico. El reglamento de tu edificio decide el caso. No armamos denuncias ni decimos quién gana.",
+    "consorcioCta": "Nota para el consorcio",
+    "waitlistCta": "Avisame cuando esté listo",
+    "faqMoreTitle": "Los temas, uno por uno",
+    "faqMoreLead": "La respuesta corta está arriba. Acá está escrita para poder citarla.",
+    "noteMoreTitle": "El marco, por si lo piden",
+    "noteMoreLead": "La nota de arriba se reenvía. Estas páginas explican la ley y las denuncias, sin convertir a Lume en un permiso.",
+    "empty": "No hay guías para mostrar."
   },
   "consorcioPage": {
     "metaTitle": "Nota para el consorcio — Lume",
